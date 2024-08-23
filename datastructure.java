@@ -230,7 +230,98 @@ class dlll{
         list.display();
  }
 }
+2.iii)CircularLinkedlist:
+import java.util.*;
+class cll{
+    Node head;
+    class Node{
+        int data;
+        Node next;
+        Node(int val){
+            data=val;
+            next=null;
+        }
+    }
+    cll(){
+        head=null;
+    }
+    void insertbeg(int k){
+        Node newnode=new Node(k);
+        if(head==null){
+            newnode.next=newnode;
+            head=newnode;
+        }else{
+            newnode.next=head.next;
+            head.next=newnode;
+            head=newnode;
+        }
+    }
+    void insertend(int a){
+        Node newnode=new Node(a);
+        if(head==null) {
+            newnode.next = newnode;
+            head = newnode;
+        }else{
+            newnode.next=head.next;
+            head.next=newnode;
+            head=newnode;
+        }
 
+    }
+    void insertpos(int pos,int val ){
+        Node newnode=new Node(val);
+        Node temp=head.next;
+        for(int i=1;i<pos-1;i++){
+            temp=temp.next;
+        }
+        newnode.next=temp.next;
+        temp.next=newnode;
+    }
+    public void sorting(){
+        Node cur,ind;
+        int temp;
+        for(cur=head.next;cur.next!=head.next;cur=cur.next){
+            for(ind=cur.next;ind!=head.next;ind=ind.next){
+                if(cur.data>ind.data){
+                    temp=cur.data;
+                    cur.data=ind.data;
+                    ind.data=temp;
+                }
+            }
+        }
+    }
+    void delbeg(){
+        head.next=head.next.next;
+    }
+    void display() {
+        Node temp = head.next;
+        do {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        while (temp != head.next);
+        System.out.println(" ");
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        cll list=new cll();
+        while(true) {
+            int i = sc.nextInt();
+            if (i == -1)
+                break;
+            else
+                list.insertbeg(i);
+        }
+        list.insertend(8);
+        list.display();
+        list.insertpos(3,100);
+        list.display();
+        list.delbeg();
+        list.display();
+        list.sorting();
+        list.display();
+    }
+}
 3.Queue:
 import java.util.Scanner;
 
