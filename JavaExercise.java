@@ -429,3 +429,29 @@ class sll{
     list.rev(p);
   }
 }
+15.LuckyNumberFinder:
+import java.util.*;
+public class LuckyNumberFinder {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        int sum = 0;
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (Character.isLetter(c)) {
+                sum += Character.toLowerCase(c) - 'a' + 1;
+            }
+        }
+        int num = sum ;
+        while (num > 9) {
+            int rem = 0;
+            while (num > 0) {
+                rem += num % 10;
+                num = num / 10;
+            }
+            num=rem;
+        }
+        System.out.print(num);
+    }
+}
+
