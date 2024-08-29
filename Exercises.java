@@ -638,7 +638,7 @@ public class vector {
 }
 
 
-// 22).Write a program to count the number of sorted rows in a matrix
+// 23).Write a program to count the number of sorted rows in a matrix
 
 import java.util.*;
 class main{
@@ -674,7 +674,7 @@ class main{
 }
 
 
-  23). /* Check whether given number is Pentagonal number A Pentagonal number is a number 
+  24). /* Check whether given number is Pentagonal number A Pentagonal number is a number 
 that can be represented using a regular geometric pattern typically formed using 
 dots that are regularly spaced. A pentagonal number takes the form of a pentagon. 
 The first 6 pentagonal numbers are: 1, 5, 12, 22, 35, 51,.etc */ 
@@ -701,7 +701,7 @@ public class Main {
 }
 
 
-  24). /* For the given N , generate a N values of a series where the odd terms are multiples of 2 and even 
+  25). /* For the given N , generate a N values of a series where the odd terms are multiples of 2 and even 
 terms are obtained by dividing previous term by 2.*/
 
 import java.util.*;
